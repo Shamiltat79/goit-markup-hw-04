@@ -10,6 +10,7 @@
     --font-family-logo: 'Raleway', sans-serif;
     --button-color: #f5f4fA; 
     --primary-line-height: 1,17;
+    --icon-primary-color: #afb1b8;
 }
 /* Base */
 
@@ -135,7 +136,6 @@ body {
     display: flex;
     list-style: none;
     margin-left: 93px;
-    /* margin-top: 0; */
     padding: 0;
 }
 
@@ -173,10 +173,17 @@ body {
    }
     
     
-   
+   .mail-icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: #757575;
+   }
    
    .mail-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 50px;
     font-family: var(--font-family-primary);
     font-size: 14px;
@@ -185,14 +192,33 @@ body {
     color: #757575;
     text-decoration: none;
    }
+   .mail-icon:hover,
+   .mail-icon:active,
+   .mail-icon:focus {
+   fill: #2196f3;
+   }
    .mail-link:hover,
    .mail-link:active,
    .mail-link:focus {
    color: var(--color-accent)
    }
+   .tel-icon{
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: #757575;
+   }
+   .tel-icon:hover,
+   .tel-icon:active,
+   .tel-icon:focus {
+    fill: #2196f3;
+   }
+
+
    .tel-link {
-    display: block;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-family-primary);
     font-size: 14px;
     font-weight: 500;
@@ -207,25 +233,25 @@ body {
 
 /* Hero */
    .hero {
-    height: 600px;
+    max-width: 1600px;
+    min-height: 600px;
+    background-image: url('../images/Img.jpg');
+    background-size: cover;
+    background-position: center;
     background-color: #2f303a; 
     padding-top: 200px;
     padding-bottom: 200px;
+    margin: 0 auto;
    }
    .hero-section {
-
     width: 1200px;
-    
-    justify-content: center;
-    align-items: center;
-    
-    background-color: #2f303a;
+    padding: 0 252px;
     text-align: center;
     margin: 0 auto;
      
    }
    .hero-title {
-    margin: auto;
+    margin: 0;
     width: 696px;
     margin-bottom: 30px;
     color: var(--accent-text-color);
@@ -241,7 +267,7 @@ body {
    .hero-button {
     display: block;
     margin: 0 auto;
-    border: 0;
+    border: none;
     border-radius: 4px;
     background-color: var(--color-accent);
     color: var(--accent-text-color);
@@ -262,16 +288,22 @@ body {
 
     padding-top: 94px;
     padding-bottom: 94px;
+    
+   }
+   .features-container {
+    display: block;
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
    }
    
    .features-list {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
     list-style: none;
     margin: 0 auto;
-    padding: 0 15px;
     margin-bottom: 94px;
+    padding: 0;
    }
    .features-list h3 {
     display: inline-block;
@@ -285,8 +317,29 @@ body {
    .featureslist-item {
     display: block;
     width: 270px;
-
+    
    }
+   .features-icon {
+    display: block;
+    width: 270px;
+    height: 120px;
+    background-color: var(--button-color);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+   }
+   .antenna,
+   .clock,
+   .diagram,
+   .astronaut {
+    width: 70px;
+    height: 70px;
+   }
+    
+   
+   
+    
+   
    .features-text {
     font-family: var(--font-family-primary);
     font-weight: 400;
@@ -296,23 +349,14 @@ body {
     letter-spacing: 0.03em;
     margin: 0;
    }
-   .servises {
-   padding-bottom: 94px; 
-   } 
-   
+      
 
-   .servises-container{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   width: 1200px;
-   padding: 0 15px ;
-   margin: 0 auto;
-   background-color: var(--backgroundcolor-primary);
-   }
+  
    
    .features-title {
-margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
    
    }
    .servis-list {
@@ -361,18 +405,23 @@ margin-bottom: 50px;
     
    }
    .item-data {
+    display: block;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: var(--backgroundcolor-primary);
    }
    .item-data h3 {
+    display: block;
     margin-top: 0px;
     margin-bottom: 10px;
-   
+   margin-right: auto;
+   margin-left: auto;
    }
    
    .team-list p {
+    display: block;
     margin: 0;
+    margin-bottom: 16px;
     color: #757575;
     font-size: 16px;
     line-height: 1.19;
@@ -391,6 +440,109 @@ margin-bottom: 50px;
     font-weight: 500;
     font-size: 16px;
 }
+.social-webs {
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%; 
+width: 206px;  
+height: 44px;
+margin: 0 auto;
+
+}
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--backgroundcolor-primary);
+  }
+  .social-link:not(:last-child) {
+    margin-right: 5px;
+  }
+  .social-link:not(:first-child) {
+  margin-left: 5px;
+  }
+  .social-link:hover,
+  .social-link:active,
+  .social-link:focus {
+    background-color: var(--color-accent);
+  }
+  
+
+.links-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-primary-color);
+
+}
+.links-icon:hover,
+.links-icon:active,
+.links-icon:focus {
+ fill: var(--backgroundcolor-primary);
+}
+/* clients */
+
+.clients {
+padding-top: 105px;
+padding-bottom: 94px;
+}
+.brands {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+}
+.clients-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;    
+}
+.clients-list {
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.clients-list.brands-logotype {
+display: block;
+}
+
+.clients-item {
+width: 170px;
+height: 92px;
+border: 1px solid;
+border-color: var(--icon-primary-color);
+padding: 16px 31px;
+}
+.clients-item:not(:last-child) {
+margin-right: 30px;
+}
+.client-links {
+    display: block;
+    margin: 0 auto;
+}
+
+.brands-logotype {
+ width: 106px;
+ height: 60px;   
+margin: 0 auto;
+fill: var(--icon-primary-color);
+}
+.brands-logotype:hover,
+.brands-logotype:active,
+.brands-logotype:focus {
+    fill: var(--color-accent);
+}
+
+/* footer */
+
 footer {
 background-color: #2f303a;
 padding-top: 60px;
