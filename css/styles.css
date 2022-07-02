@@ -462,6 +462,11 @@ margin: 0 auto;
     border-radius: 50%;
     background-color: var(--backgroundcolor-primary);
   }
+  .social-link>a {
+    display: flex;
+    align-items: center;
+  }
+
   .social-link:not(:last-child) {
     margin-right: 5px;
   }
