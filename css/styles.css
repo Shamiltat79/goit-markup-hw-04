@@ -378,6 +378,7 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: #f5f4fa;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
    }
    .team-container {
   display: flex;
@@ -429,6 +430,7 @@ body {
    }
    .teamlist-item {
     margin-right: 30px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
    } 
    
    .teamlist-item:nth-child(4n) {
@@ -549,14 +551,72 @@ padding-top: 60px;
 padding-bottom: 60px;
 }
 .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
     width: 1200px;
-    
     padding-right: 15px;
-   
     padding-left: 15px;
     margin: 0 auto;
-    
     background-color: #2f303a;
+}
+.footer-logotype {
+    margin-right: 156px;
+    height: 31px;
+    margin-bottom: 20px;
+}
+.footer-title {
+    display: flex;
+    align-items: center;
+    height: 31px;
+    width: 875px;
+    
+}
+.footer-title>h3 {
+font-family: var(--font-family-primary);
+font-size: 14px;
+font-weight: 700;
+line-height: var(--primary-line-height);
+letter-spacing: 0.03em;
+color: var(--accent-text-color);
+text-align: start;
+margin-bottom: 0;
+}
+
+.footer-social {
+width: 212px;
+height: 52px;
+}
+.footerlink-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.footerlink-item {
+display: block;
+width: 44px;
+height: 44px;
+text-align: center;
+padding: 12px;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.1);
+
+}
+.footerlink-item:hover,
+.footerlink-item:active,
+.footerlink-item:focus {
+background-color: var(--color-accent);
+cursor: pointer;
+}
+.footer-icon {
+margin: 0 auto;
+width: 20px;
+height: 20px;
+fill: var(--backgroundcolor-primary);
 }
 .logotype-footer {
     display: inline-block;
@@ -567,7 +627,7 @@ color: var(--color-accent);
 .footerlink {
     display: inline-block;
     font-family: var(--font-family-logo);
-    margin-bottom: 20px;
+    
         font-size: 26px;
         font-weight: 700;
         line-height: var(--primary-line-height);
@@ -589,6 +649,8 @@ color: var(--color-accent);
     font-style: normal;
     line-height: 1.71;
     color: var(--accent-text-color);
+    width: 231px;
+    margin-right: 63px;
 }
 .contacts a {
        text-decoration: none;
@@ -659,6 +721,12 @@ border-color:  #ececec;
 }
 .example-items:nth-last-child(-n+3) {
 margin-bottom: 0;
+}
+.example-items:hover,
+.example-items:active,
+.example-items:focus {
+box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+cursor: pointer;
 }
 .item-title {
 padding: 20px 24px;   
