@@ -156,15 +156,16 @@ body {
    color: var(--color-accent);
    }
    .mail-icon {
-       display: inline;
        width: 16px;
        height: 12px;
        margin-right: 10px;
        fill: #757575;
           }
 
-   .mail-link .mail-icon:hover,
-   .mail-link .mail-icon:focus{
+   .mail-link:hover .mail-icon{
+        fill: var(--color-accent);
+    }
+   .mail-link:focus .mail-icon{
         fill:var(--color-accent);
     }
         
@@ -183,7 +184,7 @@ body {
    .tel-link:hover,
    .tel-link:active,
    .tel-link:focus {
-       color: var(--color-accent)
+    color: var(--color-accent)
    }
    .tel-icon{
     width: 10px;
@@ -191,10 +192,14 @@ body {
     margin-right: 10px;
     fill: #757575;
    }
-   .tel-link .tel-icon:hover,
-   .tel-link .tel-icon:active,
-   .tel-link .tel-icon:focus {
-    fill: #2196f3;
+   .tel-link:hover .tel-icon {
+        fill: var(--color-accent);
+    }
+   .tel-link:active .tel-icon {
+        fill: var(--color-accent);
+    }
+   .tel-link:focus .tel-icon {
+    fill:var(--color-accent);
    }
 
 
@@ -543,9 +548,12 @@ border: 1px solid;
 border-color: var(--icon-primary-color);
 fill: var(--icon-primary-color);
 }
-.brands-logotype:hover,
-.brands-logotype:active,
-.logotypes:focus {
+.client-links:hover .brands-logotype  {
+     fill: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.client-links:focus .logotypes {
 fill: var(--color-accent);
 border-color: var(--color-accent);
 }
