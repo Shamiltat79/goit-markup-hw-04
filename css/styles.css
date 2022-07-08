@@ -153,22 +153,21 @@ body {
    .mail-link:hover,
    .mail-link:active,
    .mail-link:focus {
-   color: var(--color-accent)
+   color: var(--color-accent);
    }
    .mail-icon {
-       display: flex;
+       display: inline;
        width: 16px;
        height: 12px;
        margin-right: 10px;
        fill: #757575;
-       overflow: visible;
-   }
+          }
 
-   .mail-icon:hover,
-   .mail-icon:focus,
-   .mail-icon:active {
-       fill: #2196f3;
-   }
+   .mail-link .mail-icon:hover,
+   .mail-link .mail-icon:focus{
+        fill:var(--color-accent);
+    }
+        
    .tel-link {
        display: flex;
        justify-content: center;
@@ -300,19 +299,17 @@ body {
     width: 270px;
     
    }
-   .features-icon {
-    display: block;
+   .feature-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 120px;
     background-color: var(--button-color);
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 30px;
+     margin-bottom: 30px;
    }
-   .antenna,
-   .clock,
-   .diagram,
-   .astronaut {
+   .features-icon {
     width: 70px;
     height: 70px;
    }
@@ -359,7 +356,7 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: #f5f4fa;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+   
    }
    .team-container {
   display: flex;
@@ -425,7 +422,7 @@ body {
 }
 .social-webs {
 display: flex;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 border-radius: 50%; 
 width: 206px;  
@@ -437,23 +434,16 @@ margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 44px;
+    height: 44px;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 12px;
     border-radius: 50%;
     background-color: var(--backgroundcolor-primary);
   }
-  .social-link>a {
-    display: flex;
-    align-items: center;
-  }
+  
 
-  .social-link:not(:last-child) {
-    margin-right: 5px;
-  }
-  .social-link:not(:first-child) {
-  margin-left: 5px;
-  }
+  
   .social-link:hover  {
      background-color: var(--color-accent);
      border-color: var(--color-accent);
@@ -468,8 +458,9 @@ margin: 0 auto;
   
 
 .links-icon {
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 12px 12px;
     fill: var(--icon-primary-color);
 
 }
@@ -524,35 +515,39 @@ margin-right: 30px;
     align-items: center;
     width: 170px;
     height: 92px;
-    border: 1px solid;
-    border-color: var(--icon-primary-color);
+    
+    
     }
 .client-links:hover {
 border-color: var(--color-accent);
 fill: var(--color-accent);
 }
+.client-links:focus {
+    border-color: var(--color-accent);
+    fill: var(--color-accent);
+}
+.client-links:active {
+    border-color: var(--color-accent);
+    fill: var(--color-accent);
+}
 
 
 
 .brands-logotype {
-display: inherit;
- width: 106px;
- height: 60px;   
+display: flex;
+ width: 100%;
+ height: 100%;   
 margin: 0 auto;
+padding: 16px;
+border: 1px solid;
+border-color: var(--icon-primary-color);
 fill: var(--icon-primary-color);
 }
-.brands-logotype:hover {
-        fill: var(--color-accent);
-        border-color: var(--color-accent);
-    }
-.brands-logotype:active {
-        fill: var(--color-accent);
-    }
-a .brands-logotype:focus {
-    fill: var(--color-accent);
-}
+.brands-logotype:hover,
+.brands-logotype:active,
 .logotypes:focus {
 fill: var(--color-accent);
+border-color: var(--color-accent);
 }
 
 
